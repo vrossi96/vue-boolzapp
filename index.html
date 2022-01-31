@@ -62,13 +62,13 @@
                      </div>
                   </section>
                   <!-- Contacts list -->
-                  <main class="row">
-                     <!-- !PER I CONTATTI  -->
-                     <div class="col-12 d-flex align-items-center py-2">
+                  <main class="row flex-column">
+                     <!--! PER I CONTATTI  -->
+                     <div v-for="(contact, index) in contacts" class="col-12 d-flex align-items-center py-2">
                         <div class="user-icon">
-                           <img class="img-fluid" src="img/avatar_1.jpg" alt="">
+                           <img class="img-fluid" :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
                         </div>
-                        <p class="fw-bold ps-3 fs-4 align-self-start">Nome</p>
+                        <p class="fw-bold ps-3 fs-4 align-self-start">{{contact.name}}</p>
                      </div>
                   </main>
                </div>

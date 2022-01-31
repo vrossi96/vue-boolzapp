@@ -70,7 +70,7 @@ footer {
    overflow-y: scroll;
    height: calc(100% - 205px);
 }
-#contacts main > div {
+#contacts main .col-12 {
    height: 80px;
    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
