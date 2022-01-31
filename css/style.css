@@ -86,15 +86,16 @@ footer {
    overflow-y: scroll;
    height: calc(100% - 140px);
 }
-.user-message {
-   min-height: 65px;
-   background-color: #d5f9ba;
-   border-radius: 15px;
-}
+.user-message,
 .addressee-message {
    min-height: 65px;
-   background-color: #fff;
    border-radius: 15px;
+}
+.user-message {
+   background-color: #d5f9ba;
+}
+.addressee-message {
+   background-color: #fff;
 }
 
 /** Footer Messages */
