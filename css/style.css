@@ -79,6 +79,9 @@ footer {
    height: 80px;
    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+#contacts main .col-12:last-child {
+   border-bottom: none;
+}
 
 /* Messages */
 #messages main {
