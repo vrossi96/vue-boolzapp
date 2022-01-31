@@ -34,9 +34,9 @@
                         </div>
                         <!-- User icons -->
                         <div class="col d-flex align-items-center justify-content-end">
-                           <i class="fas fa-circle-notch fa-2x ms-3"></i>
-                           <i class="fas fa-comment-alt fa-2x ms-3"></i>
-                           <i class="fas fa-ellipsis-v fa-2x ms-3"></i>
+                           <i class="fas fa-circle-notch fa-2x ms-4"></i>
+                           <i class="fas fa-comment-alt fa-2x ms-4"></i>
+                           <i class="fas fa-ellipsis-v fa-2x ms-4"></i>
                         </div>
                      </div>
                   </header>
@@ -68,7 +68,7 @@
                         <div class="user-icon">
                            <img class="img-fluid" :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
                         </div>
-                        <p class="fw-bold ps-3 fs-4 align-self-start">{{contact.name}}</p>
+                        <p class="fw-bold ps-3 fs-5 align-self-start">{{contact.name}}</p>
                      </div>
                   </main>
                </div>
@@ -76,8 +76,22 @@
                <div id="messages" class="col-8 h-100">
                   <!-- Contact Chat -->
                   <header class="row">
-                     <div class="col-12">
-                        Friend contact chat
+                     <div class="col-12 d-flex align-items-center justify-content-between">
+                        <!-- User pic and name-->
+                        <div class="col d-flex align-items-center">
+                           <div class="user-icon d-inline-block"><img class="img-fluid" src="img/avatar_1.jpg"
+                                 alt="User Pic"></div>
+                           <div class="ps-2 flex-column">
+                              <span class="fw-bold fs-5">Michele</span>
+                              <span class="d-block">Ultimo accesso oggi alle...</span>
+                           </div>
+                        </div>
+                        <!-- User icons -->
+                        <div class="col d-flex align-items-center justify-content-end">
+                           <i class="fas fa-search fa-2x ms-4"></i>
+                           <i class="fas fa-paperclip fa-2x ms-4"></i>
+                           <i class="fas fa-ellipsis-v fa-2x mx-4"></i>
+                        </div>
                      </div>
                   </header>
                   <!-- Messages -->
