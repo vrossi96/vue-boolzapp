@@ -9,6 +9,10 @@
    background-color: #fff;
 }
 
+i {
+   color: #b1b1b1;
+}
+
 header,
 footer {
    /* todo rimuovere */
@@ -26,6 +30,15 @@ footer {
    background-color: #8edafc;
 }
 
+/* User */
+#user-img {
+   border-radius: 50%;
+   overflow: hidden;
+}
+#contacts header img {
+   height: 60px;
+}
+
 /* *Search contact */
 #search-contact {
    height: 50px;
@@ -41,7 +54,7 @@ footer {
 /* Contacts list */
 #contacts main {
    overflow-y: scroll;
-   max-height: calc(100% - 205px);
+   height: calc(100% - 205px);
 }
 #contacts main > div {
    height: 85px;
