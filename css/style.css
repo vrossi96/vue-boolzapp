@@ -3,14 +3,24 @@
    background: linear-gradient(180deg, rgba(0, 150, 136, 1) 0%, rgba(0, 150, 136, 1) 15%, rgba(214, 219, 216, 1) 15%);
 }
 
+/* general */
 #app {
    height: 95%;
    background-color: #fff;
 }
 
+header {
+   height: 75px;
+   background-color: #eaeaea;
+}
+
+/* Contacts */
 #contacts {
    background-color: burlywood;
+   border-right: 1px solid rgba(0, 0, 0, 0.5);
 }
+
+/* Messages */
 #messages {
    background-color: cadetblue;
 }
