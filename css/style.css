@@ -21,20 +21,20 @@ footer {
    background-color: #eaeaea;
 }
 
+.user-icon {
+   border-radius: 50%;
+   overflow: hidden;
+}
+.user-icon > img {
+   height: 60px;
+}
+
 /* Contacts */
 #contacts {
    border-right: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 /* *User */
-#user-img {
-   border-radius: 50%;
-   overflow: hidden;
-}
-#contacts header img {
-   height: 60px;
-}
-
 /* *Notification */
 #notification {
    /* todo rimuovere */
@@ -71,7 +71,7 @@ footer {
    height: calc(100% - 205px);
 }
 #contacts main > div {
-   height: 85px;
+   height: 80px;
    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
