@@ -54,7 +54,7 @@ footer {
    overflow-y: scroll;
    height: calc(100% - 140px);
 }
-#messages main .message {
+#messages main .col-12 {
    height: 80px;
    border-bottom: 1px solid black;
 }
