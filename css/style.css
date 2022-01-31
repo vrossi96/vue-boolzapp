@@ -54,7 +54,13 @@ footer {
    overflow-y: scroll;
    height: calc(100% - 140px);
 }
-#messages main .col-12 {
-   height: 80px;
-   border-bottom: 1px solid black;
+.user-message {
+   min-height: 65px;
+   background-color: #d5f9ba;
+   border-radius: 15px;
+}
+.addressee-message {
+   min-height: 65px;
+   background-color: #fff;
+   border-radius: 15px;
 }
