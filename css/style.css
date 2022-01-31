@@ -9,7 +9,8 @@
    background-color: #fff;
 }
 
-header {
+header,
+footer {
    /* todo rimuovere */
    height: 70px;
    background-color: #eaeaea;
@@ -48,6 +49,12 @@ header {
 }
 
 /* Messages */
-#messages {
-   background-color: cadetblue;
+#messages main {
+   background-image: url(../img/mine.jpg);
+   overflow-y: scroll;
+   height: calc(100% - 140px);
+}
+#messages main .message {
+   height: 80px;
+   border-bottom: 1px solid black;
 }
