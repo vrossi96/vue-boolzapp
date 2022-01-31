@@ -10,14 +10,41 @@
 }
 
 header {
-   height: 75px;
+   /* todo rimuovere */
+   height: 70px;
    background-color: #eaeaea;
 }
 
 /* Contacts */
 #contacts {
-   background-color: burlywood;
    border-right: 1px solid rgba(0, 0, 0, 0.5);
+}
+#notification {
+   /* todo rimuovere */
+   height: 85px;
+   background-color: #8edafc;
+}
+
+/* *Search contact */
+#search-contact {
+   height: 50px;
+   background-color: #fafafa;
+}
+.input-group-text {
+   background-color: #fff;
+}
+.form-control {
+   border-left: none;
+}
+
+/* Contacts list */
+#contacts main {
+   overflow-y: scroll;
+   max-height: calc(100% - 205px);
+}
+#contacts main > div {
+   height: 85px;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Messages */
