@@ -9,7 +9,8 @@
    background-color: #fff;
 }
 
-i {
+header i,
+#search-contact i {
    color: #b1b1b1;
 }
 
@@ -24,13 +25,8 @@ footer {
 #contacts {
    border-right: 1px solid rgba(0, 0, 0, 0.5);
 }
-#notification {
-   /* todo rimuovere */
-   height: 85px;
-   background-color: #8edafc;
-}
 
-/* User */
+/* *User */
 #user-img {
    border-radius: 50%;
    overflow: hidden;
@@ -39,6 +35,24 @@ footer {
    height: 60px;
 }
 
+/* *Notification */
+#notification {
+   /* todo rimuovere */
+   height: 85px;
+   background-color: #8edafc;
+}
+#notification div.d-inline-block {
+   background-color: #fff;
+   height: 60px;
+   width: 60px;
+   border-radius: 50%;
+}
+#notification i {
+   color: #8edafc;
+}
+#notification a {
+   color: #979797;
+}
 /* *Search contact */
 #search-contact {
    height: 50px;
