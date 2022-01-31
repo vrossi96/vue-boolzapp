@@ -72,7 +72,7 @@ footer {
 
 /* Contacts list */
 #contacts main {
-   overflow-y: scroll;
+   overflow-y: auto;
    height: calc(100% - 205px);
 }
 #contacts main .col-12 {
@@ -86,7 +86,7 @@ footer {
 /* Messages */
 #messages main {
    background-image: url(../img/mine.jpg);
-   overflow-y: scroll;
+   overflow-y: auto;
    height: calc(100% - 140px);
 }
 .user-message,
