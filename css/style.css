@@ -10,8 +10,13 @@
 }
 
 header i,
-#search-contact i {
+#search-contact i,
+footer i {
    color: #b1b1b1;
+}
+header i {
+   font-size: 1.5rem;
+   cursor: pointer;
 }
 
 header,
@@ -90,4 +95,9 @@ footer {
    min-height: 65px;
    background-color: #fff;
    border-radius: 15px;
+}
+
+/** Footer Messages */
+footer i {
+   cursor: pointer;
 }
