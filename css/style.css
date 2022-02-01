@@ -75,8 +75,20 @@ footer {
 .input-group-text {
    background-color: #fff;
 }
-.form-control {
-   border-left: none;
+.search-container {
+   position: relative;
+}
+.search-lens {
+   position: absolute;
+   font-size: 1.2rem;
+   top: 50%;
+   left: 15px;
+   transform: translateY(-50%);
+   z-index: 1;
+}
+#search-contact input.form-control {
+   border-radius: 9px;
+   padding-left: 54px;
 }
 
 /* Contacts list */
