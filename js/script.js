@@ -97,7 +97,21 @@ const app = new Vue({
          this.contacts.map((contact) => {
             return (contact.visible = false);
          });
-         this.contacts[index].visible = !this.contacts[index].visible;
+         this.contacts[index].visible = true;
+      },
+
+      addMessage(index) {
+         const newText = this.user.message.trim();
+         const newMessage = {
+            date: "10/01/2022 18:45:00",
+            text: newText,
+            status: "sent",
+         };
+         const newArray = [...this.contacts[index].messages, newMessage];
+         this.contacts[index].messages = newArray;
+         // Secondo metodo
+         // this.contacts[index].messages.push(newMessage);
+         this.user.message = "";
       },
    },
 });

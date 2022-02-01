@@ -82,64 +82,65 @@
                </div>
                <!-- #Container Messages -->
                <div id="messages" class="col-8 h-100">
-                  <!-- Contact Chat -->
-                  <header class="row">
-                     <div class="col-12">
-                        <div class="row align-items-center justify-content-between h-100">
-                           <!--! VUE User pic and name-->
-                           <div v-for="(contact, index) in contacts" v-if="contact.visible"
-                              class="col d-flex align-items-center">
-                              <div class="user-icon d-inline-block"><img class="img-fluid"
-                                    :src="'img/avatar' + contact.avatar + '.jpg'" alt="User Pic"></div>
-                              <div class="ps-2 flex-column">
-                                 <span class="fw-bold fs-5">{{contact.name}}</span>
-                                 <span class="d-block">Ultimo accesso oggi alle...</span>
+                  <div class="h-100" v-for="(contact, index) in contacts" v-if="contact.visible">
+                     <!-- Contact Chat -->
+                     <header class="row">
+                        <div class="col-12">
+                           <div class="row align-items-center justify-content-between h-100">
+                              <!--! VUE User pic and name-->
+                              <div v-if="contact.visible" class="col d-flex align-items-center">
+                                 <div class="user-icon d-inline-block"><img class="img-fluid"
+                                       :src="'img/avatar' + contact.avatar + '.jpg'" alt="User Pic"></div>
+                                 <div class="ps-2 flex-column">
+                                    <span class="fw-bold fs-5">{{contact.name}}</span>
+                                    <span class="d-block">Ultimo accesso oggi alle...</span>
+                                 </div>
+                              </div>
+                              <!-- User icons -->
+                              <div class="col d-flex align-items-center justify-content-end">
+                                 <i class="fas fa-search ms-3"></i>
+                                 <i class="fas fa-paperclip ms-3"></i>
+                                 <i class="fas fa-ellipsis-v mx-3"></i>
                               </div>
                            </div>
-                           <!-- User icons -->
-                           <div class="col d-flex align-items-center justify-content-end">
-                              <i class="fas fa-search ms-3"></i>
-                              <i class="fas fa-paperclip ms-3"></i>
-                              <i class="fas fa-ellipsis-v mx-3"></i>
-                           </div>
                         </div>
-                     </div>
-                  </header>
-                  <!-- Messages -->
-                  <section class="main row">
-                     <div class="col-12">
-                        <div class="px-5 py-3">
-                           <!-- ! VUE Creation messages -->
-                           <div v-for="contact in contacts" v-if="contact.visible" class="row">
-                              <!-- User Message -->
-                              <div v-for="message in contact.messages" class="col-12 d-flex"
-                                 :class="{'justify-content-end': message.status === 'sent'}">
-                                 <div class="message-text my-2"
-                                    :class="message.status === 'sent' ? 'user-message' : 'addressee-message'">
-                                    <p class="p-2 mb-0">{{message.text}}</p>
-                                    <p class="date text-secondary mb-1">{{message.date}}</p>
+                     </header>
+                     <!-- Messages -->
+                     <section class="main row">
+                        <div class="col-12">
+                           <div class="px-4 py-3">
+                              <!-- ! VUE Creation messages -->
+                              <div v-if="contact.visible" class="row">
+                                 <!-- User Message -->
+                                 <div v-for="message in contact.messages" class="col-12 d-flex"
+                                    :class="{'justify-content-end': message.status === 'sent'}">
+                                    <div class="message-text my-2"
+                                       :class="message.status === 'sent' ? 'user-message' : 'addressee-message'">
+                                       <p class="p-2 mb-0">{{message.text}}</p>
+                                       <p class="date text-secondary mb-1">{{message.date}}</p>
+                                    </div>
                                  </div>
                               </div>
                            </div>
                         </div>
-                     </div>
-                  </section>
-                  <!-- Message input -->
-                  <footer class="row">
-                     <div class="col-1 d-flex align-items-center justify-content-center">
-                        <i class="far fa-smile-wink fa-2x"></i>
-                     </div>
-                     <!-- Input field -->
-                     <div class="col-10 d-flex align-items-center">
-                        <div class="input-group">
-                           <input type="text" class="form-control" placeholder="Scrivi un messaggio"
-                              v-on:keyup.enter="addMessage" v-model="user.message">
+                     </section>
+                     <!-- Message input -->
+                     <footer class="row">
+                        <div class="col-1 d-flex align-items-center justify-content-center">
+                           <i class="far fa-smile-wink fa-2x"></i>
                         </div>
-                     </div>
-                     <div class="col-1 d-flex align-items-center justify-content-center">
-                        <i class="fas fa-microphone fa-2x"></i>
-                     </div>
-                  </footer>
+                        <!-- Input field -->
+                        <div class="col-10 d-flex align-items-center">
+                           <div class="input-group">
+                              <input type="text" class="form-control" placeholder="Scrivi un messaggio"
+                                 v-on:keyup.enter="addMessage(index)" v-model="user.message">
+                           </div>
+                        </div>
+                        <div class="col-1 d-flex align-items-center justify-content-center">
+                           <i class="fas fa-microphone fa-2x"></i>
+                        </div>
+                     </footer>
+                  </div>
                </div>
             </div>
          </div>
