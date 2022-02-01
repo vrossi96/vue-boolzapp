@@ -3,7 +3,28 @@
    background: linear-gradient(180deg, rgba(0, 150, 136, 1) 0%, rgba(0, 150, 136, 1) 15%, rgba(214, 219, 216, 1) 15%);
 }
 
-/* general */
+/* *******SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+   width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+   background: #f1f1f127;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+   background: #dbd4ca;
+   border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+   background: #b8b2a9;
+}
+/* *************general */
 #app {
    height: 95%;
    background-color: #fff;
