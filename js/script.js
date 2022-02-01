@@ -112,6 +112,17 @@ const app = new Vue({
          // Secondo metodo
          // this.contacts[index].messages.push(newMessage);
          this.user.message = "";
+
+         //* Answer from pc
+         setTimeout(() => {
+            const autoMessage = {
+               date: "10/01/2022 18:45:00",
+               text: "Ok",
+               status: "received",
+            };
+            const newArray = [...this.contacts[index].messages, autoMessage];
+            this.contacts[index].messages = newArray;
+         }, 2000);
       },
    },
 });
