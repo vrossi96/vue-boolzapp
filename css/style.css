@@ -89,10 +89,19 @@ footer {
    overflow-y: auto;
    height: calc(100% - 140px);
 }
+.message-text {
+   max-width: 42%;
+}
+.date {
+   font-size: 11px;
+   text-align: right;
+   padding-right: 3px;
+   padding-left: 3px;
+}
 .user-message,
 .addressee-message {
    min-height: 65px;
-   border-radius: 15px;
+   border-radius: 10px;
 }
 .user-message {
    background-color: #d5f9ba;

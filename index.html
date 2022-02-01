@@ -108,14 +108,17 @@
                   <!-- Messages -->
                   <section class="main row">
                      <div class="col-12">
-                        <!-- ! VUE Creation messages -->
-                        <div v-for="contact in contacts" v-if="contact.visible" class="row">
-                           <!-- User Message -->
-                           <div v-for="message in contact.messages" class="col-12 d-flex"
-                              :class="{'justify-content-end': message.status === 'sent'}">
-                              <div class="col-5 my-2"
-                                 :class="message.status === 'sent' ? 'user-message' : 'addressee-message'">
-                                 <p class="px-3 pt-2 pb-4 mb-0">{{message.text}}</p>
+                        <div class="px-5 py-3">
+                           <!-- ! VUE Creation messages -->
+                           <div v-for="contact in contacts" v-if="contact.visible" class="row">
+                              <!-- User Message -->
+                              <div v-for="message in contact.messages" class="col-12 d-flex"
+                                 :class="{'justify-content-end': message.status === 'sent'}">
+                                 <div class="message-text my-2"
+                                    :class="message.status === 'sent' ? 'user-message' : 'addressee-message'">
+                                    <p class="p-2 mb-0">{{message.text}}</p>
+                                    <p class="date text-secondary mb-1">{{message.date}}</p>
+                                 </div>
                               </div>
                            </div>
                         </div>
