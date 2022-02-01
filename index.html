@@ -64,11 +64,13 @@
                      </div>
                   </section>
                   <!-- Contacts list -->
-                  <main class="row">
+                  <section class="main row">
                      <div class="col-12 flex-column">
                         <!--! PER I CONTATTI  -->
                         <div class="row">
-                           <div v-for="(contact, index) in contacts" class="col-12 d-flex align-items-center py-2">
+                           <div v-for="(contact, index) in contacts"
+                              class="col-12 d-flex align-items-center py-2 single-contact" @click="selectContact(index)"
+                              role="button">
                               <div class="user-icon">
                                  <img class="img-fluid" :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
                               </div>
@@ -76,7 +78,7 @@
                            </div>
                         </div>
                      </div>
-                  </main>
+                  </section>
                </div>
                <!-- #Container Messages -->
                <div id="messages" class="col-8 h-100">
@@ -85,11 +87,12 @@
                      <div class="col-12">
                         <div class="row align-items-center justify-content-between h-100">
                            <!-- User pic and name-->
-                           <div class="col d-flex align-items-center">
-                              <div class="user-icon d-inline-block"><img class="img-fluid" src="img/avatar_1.jpg"
-                                    alt="User Pic"></div>
+                           <div v-for="(contact, index) in contacts" v-if="contact.visible"
+                              class="col d-flex align-items-center">
+                              <div class="user-icon d-inline-block"><img class="img-fluid"
+                                    :src="'img/avatar' + contact.avatar + '.jpg'" alt="User Pic"></div>
                               <div class="ps-2 flex-column">
-                                 <span class="fw-bold fs-5">Michele</span>
+                                 <span class="fw-bold fs-5">{{contact.name}}</span>
                                  <span class="d-block">Ultimo accesso oggi alle...</span>
                               </div>
                            </div>
@@ -103,7 +106,7 @@
                      </div>
                   </header>
                   <!-- Messages -->
-                  <main class="row">
+                  <section class="main row">
                      <div class="col-12">
                         <div class="row">
                            <!-- User Message -->
@@ -125,7 +128,7 @@
                            </div>
                         </div>
                      </div>
-                  </main>
+                  </section>
                   <!-- Message input -->
                   <footer class="row">
                      <div class="col-1 d-flex align-items-center justify-content-center">

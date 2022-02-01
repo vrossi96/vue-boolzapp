@@ -71,20 +71,20 @@ footer {
 }
 
 /* Contacts list */
-#contacts main {
+#contacts .main {
    overflow-y: auto;
    height: calc(100% - 205px);
 }
-#contacts main .col-12 {
+#contacts .main .col-12 {
    height: 80px;
    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-#contacts main .col-12:last-child {
+#contacts .main .col-12:last-child {
    border-bottom: none;
 }
 
 /* Messages */
-#messages main {
+#messages .main {
    background-image: url(../img/mine.jpg);
    overflow-y: auto;
    height: calc(100% - 140px);
