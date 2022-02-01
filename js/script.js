@@ -102,27 +102,29 @@ const app = new Vue({
 
       addMessage(index) {
          const newText = this.user.message.trim();
-         const newMessage = {
-            date: "10/01/2022 18:45:00",
-            text: newText,
-            status: "sent",
-         };
-         const newArray = [...this.contacts[index].messages, newMessage];
-         this.contacts[index].messages = newArray;
-         // Secondo metodo
-         // this.contacts[index].messages.push(newMessage);
-         this.user.message = "";
-
-         //* Answer from pc
-         setTimeout(() => {
-            const autoMessage = {
+         if (newText) {
+            const newMessage = {
                date: "10/01/2022 18:45:00",
-               text: "Ok",
-               status: "received",
+               text: newText,
+               status: "sent",
             };
-            const newArray = [...this.contacts[index].messages, autoMessage];
+            const newArray = [...this.contacts[index].messages, newMessage];
             this.contacts[index].messages = newArray;
-         }, 2000);
+            // Secondo metodo
+            // this.contacts[index].messages.push(newMessage);
+            this.user.message = "";
+
+            //* Answer from pc
+            setTimeout(() => {
+               const autoMessage = {
+                  date: "10/01/2022 18:45:00",
+                  text: "Ok",
+                  status: "received",
+               };
+               const newArray = [...this.contacts[index].messages, autoMessage];
+               this.contacts[index].messages = newArray;
+            }, 2000);
+         }
       },
    },
 });
