@@ -83,7 +83,7 @@ footer {
    border-bottom: none;
 }
 .selected-contact {
-   background: linear-gradient(90deg, rgba(105, 105, 105, 1) 0%, rgba(219, 212, 202, 1) 69%, rgba(219, 212, 202, 1) 100%);
+   background: linear-gradient(90deg, rgba(105, 105, 105, 0.5) 0%, rgba(219, 212, 202, 0.5) 69%, rgba(219, 212, 202, 0.5) 100%);
 }
 
 /* Messages */
