@@ -36,7 +36,7 @@ footer {
 
 /* Contacts */
 #contacts {
-   border-right: 1px solid rgba(0, 0, 0, 0.5);
+   border-right: 1px solid #dbd4ca;
 }
 
 /* *User */
@@ -81,6 +81,9 @@ footer {
 }
 #contacts .main .col-12:last-child {
    border-bottom: none;
+}
+.selected-contact {
+   background: linear-gradient(90deg, rgba(105, 105, 105, 1) 0%, rgba(219, 212, 202, 1) 69%, rgba(219, 212, 202, 1) 100%);
 }
 
 /* Messages */

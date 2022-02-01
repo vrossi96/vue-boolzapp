@@ -69,10 +69,11 @@
                         <!--! VUE Contacts  -->
                         <div class="row">
                            <div v-for="(contact, index) in contacts"
-                              class="col-12 d-flex align-items-center py-2 single-contact" @click="selectContact(index)"
+                              class="col-12 d-flex align-items-center py-2 single-contact"
+                              :class="{'selected-contact' : contact.visible}" @click="selectContact(index)"
                               role="button">
                               <div class="user-icon">
-                                 <img class="img-fluid" :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
+                                 <img class="img-fluid" :src="`img/avatar${contact.avatar}.jpg`" alt="">
                               </div>
                               <p class="fw-bold ps-3 fs-5 align-self-start">{{contact.name}}</p>
                            </div>
@@ -91,7 +92,7 @@
                               <!--! VUE User pic and name-->
                               <div v-if="contact.visible" class="col d-flex align-items-center">
                                  <div class="user-icon d-inline-block"><img class="img-fluid"
-                                       :src="'img/avatar' + contact.avatar + '.jpg'" alt="User Pic"></div>
+                                       :src="`img/avatar${contact.avatar}.jpg`" alt="User Pic"></div>
                                  <div class="ps-2 flex-column">
                                     <span class="fw-bold fs-5">{{contact.name}}</span>
                                     <span class="d-block">Ultimo accesso oggi alle...</span>
