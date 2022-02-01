@@ -111,30 +111,13 @@
                         <!-- ! VUE Creation messages -->
                         <div v-for="contact in contacts" v-if="contact.visible" class="row">
                            <!-- User Message -->
-                           <div v-for="message in contact.messages" class="col-12 d-flex justify-content-end">
-                              <div class="user-message col-5 my-2">
+                           <div v-for="message in contact.messages" class="col-12 d-flex"
+                              :class="{'justify-content-end': message.status === 'sent'}">
+                              <div class="col-5 my-2"
+                                 :class="message.status === 'sent' ? 'user-message' : 'addressee-message'">
                                  <p class="px-3 pt-2 pb-4 mb-0">{{message.text}}</p>
                               </div>
                            </div>
-
-
-
-                           <!-- <div class="col-12 d-flex justify-content-end">
-                              <div class="user-message col-5 my-2">
-                                 <p class="px-3 pt-2 pb-4 mb-0">Hai comprato la pizza?</p>
-                              </div>
-                           </div>
-                           <div class="col-12 d-flex justify-content-end">
-                              <div class="user-message col-5 my-2">
-                                 <p class="px-3 pt-2 pb-4 mb-0">Quella di Piermenti</p>
-                              </div>
-                           </div> -->
-                           <!-- Other messages -->
-                           <!-- <div class="col-12 d-flex">
-                              <div class="addressee-message col-5 my-2">
-                                 <p class="px-3 pt-2 pb-4 mb-0">Fatto tutto!</p>
-                              </div>
-                           </div> -->
                         </div>
                      </div>
                   </section>
