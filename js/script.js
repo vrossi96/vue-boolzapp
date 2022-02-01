@@ -93,6 +93,9 @@ const app = new Vue({
    },
    methods: {
       selectContact(index) {
+         this.contacts.map((contact) => {
+            return (contact.visible = false);
+         });
          this.contacts[index].visible = !this.contacts[index].visible;
       },
    },
