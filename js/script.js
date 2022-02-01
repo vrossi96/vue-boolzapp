@@ -1,3 +1,5 @@
+dayjs.extend(dayjs_plugin_customParseFormat);
+
 const app = new Vue({
    el: "#root",
    data: {
@@ -93,6 +95,11 @@ const app = new Vue({
       ],
    },
    methods: {
+      addPresentTime() {
+         const now = dayjs().format("DD/MM/YYYY HH:mm:ss");
+         return now;
+      },
+
       selectContact(index) {
          this.contacts.map((contact) => {
             return (contact.visible = false);
@@ -103,8 +110,9 @@ const app = new Vue({
       addMessage(index) {
          const newText = this.user.message.trim();
          if (newText) {
+            const nowTime = this.addPresentTime();
             const newMessage = {
-               date: "10/01/2022 18:45:00",
+               date: nowTime,
                text: newText,
                status: "sent",
             };
@@ -117,7 +125,7 @@ const app = new Vue({
             //* Answer from pc
             setTimeout(() => {
                const autoMessage = {
-                  date: "10/01/2022 18:45:00",
+                  date: nowTime,
                   text: "Ok",
                   status: "received",
                };
