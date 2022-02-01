@@ -66,7 +66,7 @@
                   <!-- Contacts list -->
                   <section class="main row">
                      <div class="col-12 flex-column">
-                        <!--! PER I CONTATTI  -->
+                        <!--! VUE Contacts  -->
                         <div class="row">
                            <div v-for="(contact, index) in contacts"
                               class="col-12 d-flex align-items-center py-2 single-contact" @click="selectContact(index)"
@@ -86,7 +86,7 @@
                   <header class="row">
                      <div class="col-12">
                         <div class="row align-items-center justify-content-between h-100">
-                           <!-- User pic and name-->
+                           <!--! VUE User pic and name-->
                            <div v-for="(contact, index) in contacts" v-if="contact.visible"
                               class="col d-flex align-items-center">
                               <div class="user-icon d-inline-block"><img class="img-fluid"
@@ -108,9 +108,18 @@
                   <!-- Messages -->
                   <section class="main row">
                      <div class="col-12">
-                        <div class="row">
+                        <!-- ! VUE Creation messages -->
+                        <div v-for="contact in contacts" v-if="contact.visible" class="row">
                            <!-- User Message -->
-                           <div class="col-12 d-flex justify-content-end">
+                           <div v-for="message in contact.messages" class="col-12 d-flex justify-content-end">
+                              <div class="user-message col-5 my-2">
+                                 <p class="px-3 pt-2 pb-4 mb-0">{{message.text}}</p>
+                              </div>
+                           </div>
+
+
+
+                           <!-- <div class="col-12 d-flex justify-content-end">
                               <div class="user-message col-5 my-2">
                                  <p class="px-3 pt-2 pb-4 mb-0">Hai comprato la pizza?</p>
                               </div>
@@ -119,13 +128,13 @@
                               <div class="user-message col-5 my-2">
                                  <p class="px-3 pt-2 pb-4 mb-0">Quella di Piermenti</p>
                               </div>
-                           </div>
+                           </div> -->
                            <!-- Other messages -->
-                           <div class="col-12 d-flex">
+                           <!-- <div class="col-12 d-flex">
                               <div class="addressee-message col-5 my-2">
                                  <p class="px-3 pt-2 pb-4 mb-0">Fatto tutto!</p>
                               </div>
-                           </div>
+                           </div> -->
                         </div>
                      </div>
                   </section>
