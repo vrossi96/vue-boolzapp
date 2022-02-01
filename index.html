@@ -132,7 +132,8 @@
                      <!-- Input field -->
                      <div class="col-10 d-flex align-items-center">
                         <div class="input-group">
-                           <input type="text" class="form-control" placeholder="Scrivi un messaggio">
+                           <input type="text" class="form-control" placeholder="Scrivi un messaggio"
+                              v-on:keyup.enter="addMessage" v-model="user.message">
                         </div>
                      </div>
                      <div class="col-1 d-flex align-items-center justify-content-center">

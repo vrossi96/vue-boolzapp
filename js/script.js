@@ -4,6 +4,7 @@ const app = new Vue({
       user: {
          name: "Nome Utente",
          avatar: "_io",
+         message: "",
       },
       contacts: [
          {
