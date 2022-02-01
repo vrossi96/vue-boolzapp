@@ -18,6 +18,15 @@ header i {
    font-size: 1.5rem;
    cursor: pointer;
 }
+header i:hover,
+footer i:hover {
+   color: rgb(173, 216, 230);
+   transition: color 0.1s linear;
+}
+header i:active,
+footer i:active {
+   color: rgb(108, 146, 250);
+}
 
 header,
 footer {
