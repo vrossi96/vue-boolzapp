@@ -3,6 +3,7 @@ dayjs.extend(dayjs_plugin_customParseFormat);
 const app = new Vue({
    el: "#root",
    data: {
+      searchContact: "",
       currentContact: 0,
       user: {
          name: "Nome Utente",
@@ -35,7 +36,7 @@ const app = new Vue({
          {
             name: "Fabio",
             avatar: "_2",
-            visible: false,
+            visible: true,
             messages: [
                {
                   date: "20/03/2020 16:30:00",
@@ -57,7 +58,7 @@ const app = new Vue({
          {
             name: "Samuele",
             avatar: "_3",
-            visible: false,
+            visible: true,
             messages: [
                {
                   date: "28/03/2020 10:10:40",
@@ -79,7 +80,7 @@ const app = new Vue({
          {
             name: "Marco",
             avatar: "_4",
-            visible: false,
+            visible: true,
             messages: [
                {
                   date: "10/01/2020 15:30:55",
@@ -96,6 +97,18 @@ const app = new Vue({
       ],
    },
    methods: {
+      resultSearchContact() {
+         const input = this.searchContact.toLowerCase().split("");
+         this.contacts.forEach((element) => {
+            element.visible = false;
+            const lettersArray = element.name.toLowerCase().split("");
+
+            if (input.every((item) => lettersArray.includes(item))) {
+               element.visible = true;
+            }
+         });
+      },
+
       addPresentTime() {
          const now = dayjs().format("DD/MM/YYYY HH:mm:ss");
          return now;
@@ -134,3 +147,12 @@ const app = new Vue({
       },
    },
 });
+
+const helo = "ginger";
+
+console.log(helo.split(""));
+
+/* 
+1 prendere l'input
+2 trasformare in array i name
+ */

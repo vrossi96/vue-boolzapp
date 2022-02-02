@@ -61,7 +61,8 @@
                      <div class="col-12">
                         <div class="input-group flex-nowrap search-container">
                            <i class="fas fa-search search-lens"></i>
-                           <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat">
+                           <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat"
+                              v-model="searchContact" v-on:keyup.enter="resultSearchContact">
                         </div>
                      </div>
                   </section>
@@ -73,7 +74,7 @@
                            <div v-for="(contact, index) in contacts"
                               class="col-12 d-flex align-items-center py-2 single-contact"
                               :class="{'selected-contact' : index === currentContact}" @click="selectContact(index)"
-                              role="button">
+                              role="button" v-if="contact.visible">
                               <div class="user-icon">
                                  <img class="img-fluid" :src="`img/avatar${contact.avatar}.jpg`" alt="contact.name">
                               </div>
