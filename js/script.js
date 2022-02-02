@@ -3,7 +3,6 @@ dayjs.extend(dayjs_plugin_customParseFormat);
 const app = new Vue({
    el: "#root",
    data: {
-      dropdown: false,
       searchContact: "",
       currentContact: 0,
       user: {
@@ -21,16 +20,19 @@ const app = new Vue({
                   date: "10/01/2020 15:30:55",
                   text: "Hai portato a spasso il cane?",
                   status: "sent",
+                  dropdown: false,
                },
                {
                   date: "10/01/2020 15:50:00",
                   text: "Ricordati di dargli da mangiare",
                   status: "sent",
+                  dropdown: false,
                },
                {
                   date: "10/01/2020 16:15:22",
                   text: "Tutto fatto!",
                   status: "received",
+                  dropdown: false,
                },
             ],
          },
@@ -110,8 +112,9 @@ const app = new Vue({
          });
       },
 
-      openDropdown() {
-         this.dropdown = true;
+      openDropdown(index) {
+         const dropdownStatus = this.contacts[this.currentContact].messages[index].dropdown;
+         this.contacts[this.currentContact].messages[index].dropdown = !dropdownStatus;
       },
 
       addPresentTime() {
