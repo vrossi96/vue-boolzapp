@@ -145,11 +145,11 @@
                      <div class="col-9 d-flex align-items-center">
                         <div class="input-group">
                            <input type="text" class="form-control" placeholder="Scrivi un messaggio"
-                              v-on:keyup.enter="addMessage(index)" v-model="user.message">
+                              v-on:keyup.enter="addMessage(currentContact)" v-model="user.message">
                         </div>
                      </div>
                      <div class="col-2 d-flex align-items-center justify-content-around">
-                        <i class="fas fa-paper-plane fa-2x" @click="addMessage(index)" role="button"></i>
+                        <i class="fas fa-paper-plane fa-2x" @click="addMessage(currentContact)" role="button"></i>
                         <i class="fas fa-microphone fa-2x"></i>
                      </div>
                   </footer>
