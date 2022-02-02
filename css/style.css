@@ -143,15 +143,15 @@ footer {
    padding-right: 3px;
    padding-left: 3px;
 }
-.user-message,
-.addressee-message {
+.sent,
+.received {
    min-height: 65px;
    border-radius: 10px;
 }
-.user-message {
+.sent {
    background-color: #d5f9ba;
 }
-.addressee-message {
+.received {
    background-color: #fff;
 }
 
