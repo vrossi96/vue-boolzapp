@@ -139,11 +139,6 @@ footer {
    position: relative;
 }
 
-.message-text .dropdown {
-   position: absolute;
-   top: 3px;
-   right: 3px;
-}
 .date {
    font-size: 11px;
    text-align: right;
@@ -163,6 +158,11 @@ footer {
 }
 
 /* DROPDOWN messages */
+.message-text .dropdown {
+   position: absolute;
+   top: 3px;
+   right: 3px;
+}
 .dropdown i {
    display: flex;
    align-items: center;
