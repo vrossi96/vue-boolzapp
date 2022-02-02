@@ -142,9 +142,13 @@ header span.d-block {
    overflow-y: auto;
    height: calc(100% - 140px);
 }
+/* Messages boxes */
 .message-text {
    max-width: 42%;
    position: relative;
+}
+.message-text p:first-child {
+   word-wrap: break-word;
 }
 
 .date {
