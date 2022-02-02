@@ -149,7 +149,6 @@ footer {
    align-items: center;
    justify-content: center;
    font-size: 0.9rem;
-   border: 1px solid black;
    background-color: #ffffff00;
    height: 1.2rem;
    width: 1.2rem;
@@ -160,13 +159,16 @@ footer {
 }
 .menu-dropdown,
 .r-menu-dropdown {
-   display: none;
    position: absolute;
    top: 100%;
    list-style-type: none;
 }
 .menu-dropdown {
    transform: translateX(calc(-100% + 1.2rem));
+}
+.r-menu-dropdown li,
+.menu-dropdown li {
+   border: 1px solid black;
 }
 .dropdown li {
    background-color: white;
