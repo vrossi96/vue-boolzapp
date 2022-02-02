@@ -103,7 +103,9 @@
                                     :src="`img/avatar${contacts[currentContact].avatar}.jpg`" alt="User Pic"></div>
                               <div class="ps-2 flex-column">
                                  <span class="fw-bold fs-5">{{contacts[currentContact].name}}</span>
-                                 <span class="d-block">Ultimo accesso oggi alle...</span>
+                                 <span class="d-block">Ultimo accesso:
+                                    {{contacts[currentContact].messages[contacts[currentContact].messages.length -
+                                    1].date}}</span>
                               </div>
                            </div>
                            <!-- User icons -->

@@ -132,6 +132,11 @@ footer {
 
 /*************************| RIGHT CONTAINER MESSAGES************************ */
 /*********************************# Messages *********************** */
+/* HEADER */
+header span.d-block {
+   font-size: 12px;
+}
+/* General */
 #messages .main {
    background-image: url(../img/mine.jpg);
    overflow-y: auto;
