@@ -146,9 +146,8 @@ const app = new Vue({
       addMessage(index) {
          const newText = this.user.message.trim();
          if (newText) {
-            const nowTime = this.addPresentTime();
             const newMessage = {
-               date: nowTime,
+               date: this.addPresentTime(),
                text: newText,
                status: "sent",
                dropdown: false,
@@ -162,7 +161,7 @@ const app = new Vue({
             //* Answer from pc
             setTimeout(() => {
                const autoMessage = {
-                  date: nowTime,
+                  date: this.addPresentTime(),
                   text: "Ok",
                   status: "received",
                   dropdown: false,
@@ -174,7 +173,3 @@ const app = new Vue({
       },
    },
 });
-
-const helo = "ginger";
-
-console.log(helo.split(""));
