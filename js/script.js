@@ -3,6 +3,7 @@ dayjs.extend(dayjs_plugin_customParseFormat);
 const app = new Vue({
    el: "#root",
    data: {
+      dropdown: false,
       searchContact: "",
       currentContact: 0,
       user: {
@@ -98,15 +99,19 @@ const app = new Vue({
    },
    methods: {
       resultSearchContact() {
-         const input = this.searchContact.toLowerCase().split("");
+         const input = [this.searchContact.toLowerCase()];
          this.contacts.forEach((element) => {
             element.visible = false;
-            const lettersArray = element.name.toLowerCase().split("");
+            const lettersArray = element.name.toLowerCase();
 
             if (input.every((item) => lettersArray.includes(item))) {
                element.visible = true;
             }
          });
+      },
+
+      openDropdown() {
+         this.dropdown = true;
       },
 
       addPresentTime() {
@@ -151,8 +156,3 @@ const app = new Vue({
 const helo = "ginger";
 
 console.log(helo.split(""));
-
-/* 
-1 prendere l'input
-2 trasformare in array i name
- */
