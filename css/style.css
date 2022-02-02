@@ -56,6 +56,11 @@ footer {
    background-color: #eaeaea;
 }
 
+/*************************| left CONTAINER CONTACTS************************ */
+#contacts {
+   border-right: 1px solid #dbd4ca;
+}
+/**************************# User************************* */
 .user-icon {
    border-radius: 50%;
    overflow: hidden;
@@ -64,13 +69,7 @@ footer {
    height: 60px;
 }
 
-/* Contacts */
-#contacts {
-   border-right: 1px solid #dbd4ca;
-}
-
-/* *User */
-/* *Notification */
+/**************************# Notification************************* */
 #notification {
    /* todo rimuovere */
    height: 85px;
@@ -88,7 +87,7 @@ footer {
 #notification a {
    color: #979797;
 }
-/* *Search contact */
+/***************************# Search contact************************** */
 #search-contact {
    height: 50px;
    background-color: #fafafa;
@@ -112,7 +111,7 @@ footer {
    padding-left: 54px;
 }
 
-/* Contacts list */
+/*********************************# Contacts list******************* */
 #contacts .main {
    overflow-y: auto;
    height: calc(100% - 205px);
@@ -128,7 +127,8 @@ footer {
    background: linear-gradient(90deg, rgba(105, 105, 105, 0.5) 0%, rgba(219, 212, 202, 0.5) 69%, rgba(219, 212, 202, 0.5) 100%);
 }
 
-/* Messages */
+/*************************| RIGHT CONTAINER MESSAGES************************ */
+/*********************************# Messages *********************** */
 #messages .main {
    background-image: url(../img/mine.jpg);
    overflow-y: auto;
@@ -144,6 +144,25 @@ footer {
    top: 3px;
    right: 3px;
 }
+.date {
+   font-size: 11px;
+   text-align: right;
+   padding-right: 3px;
+   padding-left: 3px;
+}
+.sent,
+.received {
+   min-height: 65px;
+   border-radius: 10px;
+}
+.sent {
+   background-color: #d5f9ba;
+}
+.received {
+   background-color: #fff;
+}
+
+/* DROPDOWN messages */
 .dropdown i {
    display: flex;
    align-items: center;
@@ -178,25 +197,7 @@ footer {
    color: #000;
 }
 
-.date {
-   font-size: 11px;
-   text-align: right;
-   padding-right: 3px;
-   padding-left: 3px;
-}
-.sent,
-.received {
-   min-height: 65px;
-   border-radius: 10px;
-}
-.sent {
-   background-color: #d5f9ba;
-}
-.received {
-   background-color: #fff;
-}
-
-/** Footer Messages */
+/* #Footer icons*/
 footer i {
    cursor: pointer;
 }
