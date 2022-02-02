@@ -125,7 +125,8 @@
                                        <ul v-if="message.dropdown" class="list-group"
                                           :class="message.status === 'sent' ? 'menu-dropdown' : 'r-menu-dropdown'">
                                           <li>
-                                             <button class="dropdown-item" type="button">Cancella messaggio</button>
+                                             <button class="dropdown-item" type="button"
+                                                @click="deleteMessage(index)">Cancella messaggio</button>
                                           </li>
                                        </ul>
                                     </div>

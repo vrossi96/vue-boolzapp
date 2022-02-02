@@ -125,6 +125,15 @@ const app = new Vue({
          this.contacts[this.currentContact].messages[index].dropdown = !dropdownStatus;
       },
 
+      deleteMessage(index) {
+         const newArray = this.contacts[this.currentContact].messages.filter((message, i) => {
+            if (index !== i) {
+               return message;
+            }
+         });
+         this.contacts[this.currentContact].messages = [...newArray];
+      },
+
       addPresentTime() {
          const now = dayjs().format("DD/MM/YYYY HH:mm:ss");
          return now;
