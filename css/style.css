@@ -154,8 +154,13 @@ footer {
    height: 1.2rem;
    width: 1.2rem;
 }
+.dropdown i:active + .menu-dropdown,
+.dropdown i:active + .r-menu-dropdown {
+   display: flex;
+}
 .menu-dropdown,
 .r-menu-dropdown {
+   display: none;
    position: absolute;
    top: 100%;
    list-style-type: none;

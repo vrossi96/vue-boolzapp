@@ -121,8 +121,9 @@
                                     <p class="p-2 pe-4 mb-0">{{message.text}}</p>
                                     <p class="date text-secondary mb-1">{{message.date}}</p>
                                     <div class="dropdown">
-                                       <i class="fas fa-chevron-down" role="button"></i>
-                                       <ul class="list-group"
+                                       <i class="fas fa-chevron-down" role="button" @click="openDropdown"
+                                          @mouseenter="openDropdown"></i>
+                                       <ul v-if="dropdown" class="list-group"
                                           :class="message.status === 'sent' ? 'menu-dropdown' : 'r-menu-dropdown'">
                                           <li>
                                              <button class="dropdown-item" type="button">Cancella messaggio</button>
