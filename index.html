@@ -72,7 +72,7 @@
                         <div class="row">
                            <div v-for="(contact, index) in contacts"
                               class="col-12 d-flex align-items-center py-2 single-contact"
-                              :class="{'selected-contact' : contact.visible}" @click="selectContact(index)"
+                              :class="{'selected-contact' : index === currentContact}" @click="selectContact(index)"
                               role="button">
                               <div class="user-icon">
                                  <img class="img-fluid" :src="`img/avatar${contact.avatar}.jpg`" alt="contact.name">
