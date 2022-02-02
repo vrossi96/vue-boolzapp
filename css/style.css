@@ -167,13 +167,15 @@ footer {
 .menu-dropdown {
    transform: translateX(calc(-100% + 1.2rem));
 }
-.r-menu-dropdown li,
-.menu-dropdown li {
-   border: 1px solid black;
+.r-menu-dropdown button,
+.menu-dropdown button {
+   border: 1px solid rgba(0, 0, 0, 0.42);
+   background-color: white;
    border-radius: 9px;
 }
-.dropdown li {
-   background-color: white;
+.dropdown-item:active {
+   background-color: #e9ecef;
+   color: #000;
 }
 
 .date {
