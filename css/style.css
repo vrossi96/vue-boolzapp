@@ -136,7 +136,37 @@ footer {
 }
 .message-text {
    max-width: 42%;
+   position: relative;
 }
+
+.message-text .dropdown {
+   position: absolute;
+   top: 3px;
+   right: 3px;
+}
+.dropdown i {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 0.9rem;
+   border: 1px solid black;
+   background-color: #ffffff00;
+   height: 1.2rem;
+   width: 1.2rem;
+}
+.menu-dropdown,
+.r-menu-dropdown {
+   position: absolute;
+   top: 100%;
+   list-style-type: none;
+}
+.menu-dropdown {
+   transform: translateX(calc(-100% + 1.2rem));
+}
+.dropdown li {
+   background-color: white;
+}
+
 .date {
    font-size: 11px;
    text-align: right;

@@ -118,8 +118,17 @@
                               <div v-for="message in contacts[currentContact].messages" class="col-12 d-flex"
                                  :class="{'justify-content-end': message.status === 'sent'}">
                                  <div class="message-text my-2" :class="message.status">
-                                    <p class="p-2 mb-0">{{message.text}}</p>
+                                    <p class="p-2 pe-4 mb-0">{{message.text}}</p>
                                     <p class="date text-secondary mb-1">{{message.date}}</p>
+                                    <div class="dropdown">
+                                       <i class="fas fa-chevron-down" role="button"></i>
+                                       <ul class="list-group"
+                                          :class="message.status === 'sent' ? 'menu-dropdown' : 'r-menu-dropdown'">
+                                          <li>
+                                             <button class="dropdown-item" type="button">Cancella messaggio</button>
+                                          </li>
+                                       </ul>
+                                    </div>
                                  </div>
                               </div>
                            </div>
@@ -148,6 +157,9 @@
          </div>
       </div>
    </div>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
    <script src="js/script.js"></script>
 </body>
 
