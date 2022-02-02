@@ -6,7 +6,7 @@ const app = new Vue({
       searchContact: "",
       currentContact: 0,
       user: {
-         name: "Nome Utente",
+         name: "Vasco Rossi",
          avatar: "_io",
          message: "",
       },
@@ -100,6 +100,44 @@ const app = new Vue({
                {
                   date: "10/01/2020 15:50:00",
                   text: "Si, ma preferirei andare al cinema",
+                  status: "received",
+                  dropdown: false,
+               },
+            ],
+         },
+         {
+            name: "Giulio",
+            avatar: "_5",
+            visible: true,
+            messages: [
+               {
+                  date: "10/01/2020 15:30:55",
+                  text: "Facciamo una partita?",
+                  status: "sent",
+                  dropdown: false,
+               },
+               {
+                  date: "10/01/2020 15:50:00",
+                  text: "Si, ma prima devo lavarmi i capelli",
+                  status: "received",
+                  dropdown: false,
+               },
+            ],
+         },
+         {
+            name: "Davide",
+            avatar: "_8",
+            visible: true,
+            messages: [
+               {
+                  date: "10/01/2020 15:30:55",
+                  text: "Hai visto quanti cani ha Ettore?",
+                  status: "sent",
+                  dropdown: false,
+               },
+               {
+                  date: "10/01/2020 15:50:00",
+                  text: "No, ma preferirei andare al lago",
                   status: "received",
                   dropdown: false,
                },
