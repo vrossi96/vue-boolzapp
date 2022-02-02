@@ -78,7 +78,14 @@
                               <div class="user-icon">
                                  <img class="img-fluid" :src="`img/avatar${contact.avatar}.jpg`" alt="contact.name">
                               </div>
-                              <p class="fw-bold ps-3 fs-5 align-self-start">{{contact.name}}</p>
+                              <div class="d-flex flex-column justify-content-between h-100">
+                                 <p class="fw-bold ps-3 fs-5 mb-0 align-self-start">{{contact.name}}</p>
+                                 <div class="ps-3">
+                                    <p class="text-secondary mb-0">{{contact.messages[contact.messages.length -
+                                       1].date}}
+                                    </p>
+                                 </div>
+                              </div>
                            </div>
                         </div>
                      </div>
