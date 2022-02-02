@@ -3,6 +3,7 @@ dayjs.extend(dayjs_plugin_customParseFormat);
 const app = new Vue({
    el: "#root",
    data: {
+      currentContact: 0,
       user: {
          name: "Nome Utente",
          avatar: "_io",
@@ -101,10 +102,7 @@ const app = new Vue({
       },
 
       selectContact(index) {
-         this.contacts.map((contact) => {
-            return (contact.visible = false);
-         });
-         this.contacts[index].visible = true;
+         this.currentContact = index;
       },
 
       addMessage(index) {
